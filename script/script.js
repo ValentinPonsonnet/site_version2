@@ -10,6 +10,7 @@ fetch("http://ergast.com/api/f1/current/last/results.json")
             <h2>Le dernier gagnant :</h2>
             <p>Nom du circuit : ${data.MRData.RaceTable.Races[0].Circuit.circuitName}</p>
             <p>Nom et prénom du pilote : ${data.MRData.RaceTable.Races[0].Results[0].Driver.givenName} ${data.MRData.RaceTable.Races[0].Results[0].Driver.familyName}</p>
+            <p>Nationnalité du pilote : ${data.MRData.RaceTable.Races[0].Results[0].Driver.nationality}</p> 
             <p>Ecurie du pilote : ${data.MRData.RaceTable.Races[0].Results[0].Constructor.name}</p>
             <p>Numéro du pilote : ${data.MRData.RaceTable.Races[0].Results[0].Driver.permanentNumber}</p>
             <p>Code d'identification : ${data.MRData.RaceTable.Races[0].Results[0].Driver.code}</p>
