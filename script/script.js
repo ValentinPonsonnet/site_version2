@@ -8,6 +8,7 @@ fetch("http://ergast.com/api/f1/current/last/results.json")
         {
             let modele =`
             <h2>Le dernier gagnant :</h2>
+            <p> Année du championnat : ${data.MRData.RaceTable.season} </p>
             <p>Nom du circuit : ${data.MRData.RaceTable.Races[0].Circuit.circuitName}</p>
             <p>Nom et prénom du pilote : ${data.MRData.RaceTable.Races[0].Results[0].Driver.givenName} ${data.MRData.RaceTable.Races[0].Results[0].Driver.familyName}</p>
             <p>Nationnalité du pilote : ${data.MRData.RaceTable.Races[0].Results[0].Driver.nationality}</p> 
