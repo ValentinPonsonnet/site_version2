@@ -19,26 +19,34 @@
   <nav class="nav justify-content-space-eveny">
     <a class="nav-link active" aria-current="page" href="Index.html">Acceuil</a>
     <a class="nav-link active" href="html/blog.html">Blog</a>
+    <a class="nav-link active" href="html/resultatPrecedent.html">Résultat Précédent</a>
     <a class="nav-link active" href="html/changelog.html">ChangeLog</a>
-    <a class="nav-link disabled" href="html/contact.html">Contact</a>
-    <a class="nav-link disabled" href="html/contact.html">Connexion</a>
-    <a class="nav-link disabled" href="html/about.html">About</a>
+    <a class="nav-link active" href="#">Contact</a>
+    <a class="nav-link active" href="#">Connexion</a>
   </nav>
 
-  <article id="last_article">
-
-    <h2>Le dernier article :</h2>
-    <!-- Ajouter du dernier article en PHP -->
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-    Minima reiciendis quis reprehenderit, assumenda, deserunt iste magnam voluptatum maxime eaque aliquam illum nemo omnis molestiae sint culpa dicta molestias quibusdam neque nostrum inventore, deleniti dignissimos? 
-    A facilis minima molestiae optio, temporibus distinctio labore est doloremque eos mollitia obcaecati, quam accusantium natus! Assumenda ea ad nihil pariatur minima error laboriosam, harum porro aperiam animi eius quidem reprehenderit unde vitae earum cum ratione iure. 
-    </p>
-  
-  </article>
-
-  <section id="last_winner">
-    Se module ne fonctione plus ou est en maintenance ! Merci de patienter !
+  <section>
+    <!-- Article -->
   </section>
+
+  <section>
+    <!-- Mise à jour du site -->
+  </section>
+
+  <div class="container">
+    <div class="row justify-content-evenly">
+      <div class="col-4">
+        <article id="last_winner">
+          Se module ne fonctione plus ou est en maintenance ! Merci de patienter :) !
+        </article>
+      </div>
+      <div class="col-4">
+        <article id="track_weather">
+
+        </article>
+      </div>
+    </div>
+  </div>
 
   <div id="carouselExampl" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -64,17 +72,29 @@
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg" alt="" title="Posséde une base de donnée" height="100px" width="100%">
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" alt="" height="100px" width="100%">
           <img src="asset/api.svg" alt="" title="Utilise une API" height="100px" width="100%">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg"" alt="" title="Le site est disponible sur Github" height="100px" width="100%" />
         </div>
       </div>
     </div>
   </div>
 
   <footer>
-
-  </footer>
-  
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col">
+          <a href="html/about.html">About</a>
+        </div>
+        <div class="col">
+          <p>&copy;Tous les droits vont à leur propriétaire respectif</p>
+        </div>
+        <div class="col">
+          <p>
+            Kitayama, Fujinomiya, Préfecture de Shizuoka 418-0112, Japon 
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>  
+   
   <script type="module" src="script/main.js" defer></script>
-
 </body>
 </html>

@@ -1,13 +1,15 @@
+*
+{
+    background-color: lightgrey !important;
+}
 #tête
 {
     text-align: center;
-    margin-bottom: 2rem;
 }
 .nav
 {
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 2rem;
 }
 .image
 {
@@ -25,28 +27,16 @@
 }
 .carousel
 {
-    padding: 5rem;
-    height: 275px;
+    padding: 3rem;
 }
 .carousel-indicators [data-bs-target]
 {
     background-color: black;
 }
-#last_article
-{
-    margin: 1%;
-    margin-left: 5px;
-    margin-right: 5px;
-    border : black solid 2px;
-    border-radius: 10px;
-}
 #last_winner
 {
-    margin-top: 1%;
-    margin-left: 5px;
-    margin-right: 5px;
-    border : black solid 2px;
-    border-radius: 10px;
+    border: solid black 2px;
+    box-shadow: black 1px 1px 1px;
 }
 @media screen and (max-width: 815px)
 {
@@ -58,7 +48,6 @@
     .carousel
     {
         display: none;
-        padding: 5rem;
         height: 200px;
     }
     .carousel-indicators [data-bs-target]
@@ -77,5 +66,9 @@
     {
         height: 100%;
         width: 100%;
+    }
+    footer
+    {
+        display: none;
     }
 }

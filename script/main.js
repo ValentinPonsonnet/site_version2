@@ -1,2 +1,2 @@
-import { showLastWinner } from './last_championship.js';
+import { showLastWinner } from './function.js';
 showLastWinner();
