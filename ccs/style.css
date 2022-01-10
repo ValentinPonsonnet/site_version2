@@ -33,11 +33,12 @@
 {
     background-color: black;
 }
-#last_winner
+#last_winner, #track_weather
 {
     border: solid black 2px;
     box-shadow: black 1px 1px 1px;
 }
+
 @media screen and (max-width: 815px)
 {
     *
