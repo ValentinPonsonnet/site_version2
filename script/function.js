@@ -23,7 +23,7 @@ export function showLastWinner()
                 return data; 
         })
         .then(data =>{
-            const api_keys = "c836698c33672d5da0b0489e218826f6"
+            const api_keys = ""
             const latitude = data.MRData.RaceTable.Races[0].Circuit.Location.lat
             const longitude = data.MRData.RaceTable.Races[0].Circuit.Location.long
             let geo = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${api_keys}&units=metric&lang=fr`;
