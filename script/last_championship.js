@@ -22,6 +22,6 @@ export function showLastWinner()
                 let element = document.querySelector('#last_winner')
                 element.innerHTML = modele;  
         })
-    }
+}
 
     
