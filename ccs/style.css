@@ -33,43 +33,15 @@
 {
     background-color: black;
 }
-#last_winner, #track_weather
-{
-    border: solid black 2px;
-    box-shadow: black 1px 1px 1px;
-}
 
 @media screen and (max-width: 815px)
 {
     *
     {
-        margin: 0px;
-        padding: 0px;
+        padding-right: 15px;
     }
     .carousel
     {
         display: none;
-        height: 200px;
     }
-    .carousel-indicators [data-bs-target]
-    {
-        background-color: black;
-    }
-    p
-    { 
-        text-align: justify;
-    }
-    h1, h2
-    {
-        text-align: center;
-    }
-    .img-thumbnail
-    {
-        height: 100%;
-        width: 100%;
-    }
-    footer
-    {
-        display: none;
-    }
-}
+}   

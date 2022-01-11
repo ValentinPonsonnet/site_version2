@@ -23,9 +23,10 @@ export function showLastWinner()
                 return data; 
         })
         .then(data =>{
-            const api_keys = ""
+            const api_keys = "<!-- Votre clé API -->"
             const latitude = data.MRData.RaceTable.Races[0].Circuit.Location.lat
             const longitude = data.MRData.RaceTable.Races[0].Circuit.Location.long
+            const city = data.MRData.RaceTable.Races[0].Circuit.Location.locality
             let geo = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${api_keys}&units=metric&lang=fr`;
         
             fetch(geo)
@@ -35,14 +36,13 @@ export function showLastWinner()
                         .then(data2 =>{
                         let u = "http://openweathermap.org/img/wn/"+data2.weather[0].icon+".png"
                         let modèle2 =`
-                        <h2>La météo actuel au dessus du circuit :</h2>
+                        <h2>La météo actuel pour : ${city}</h2>
                         <p>Température : ${data2.main.temp}°C</p>
-                        <p><img src="${u}"</p>
+                        <p>Temps : <img src="${u}"</p>
                         `
                         let element2 = document.querySelector(`#track_weather`)
                         element2.innerHTML = modèle2
                         })
         })
-                            
 }
     
