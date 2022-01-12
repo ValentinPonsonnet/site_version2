@@ -23,7 +23,17 @@ export function showLastWinner()
                 return data; 
         })
         .then(data =>{
-            const api_keys = "<!-- Votre clé API -->"
+            const coordLatitude = data.MRData.RaceTable.Races[0].Circuit.Location.lat
+            const coordLongitude = data.MRData.RaceTable.Races[0].Circuit.Location.long
+
+            let target = document.querySelector(`#track_view`);
+            let modele3=`<iframe width="100%" height="450" frameborder="0" scrolling="no" src="https://www.openstreetmap.org/export/embed.html?bbox=54.57304000854493%2C24.45531447461643%2C54.62822914123536%2C24.484102213514262&amp;layer=mapnik"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=15/${coordLatitude}/${coordLongitude}">Afficher une carte plus grande</a></small>`
+            
+            target.innerHTML = modele3;
+            return data;
+         })
+        .then(data =>{
+            const api_keys = ""
             const latitude = data.MRData.RaceTable.Races[0].Circuit.Location.lat
             const longitude = data.MRData.RaceTable.Races[0].Circuit.Location.long
             const city = data.MRData.RaceTable.Races[0].Circuit.Location.locality
@@ -38,11 +48,13 @@ export function showLastWinner()
                         let modèle2 =`
                         <h2>La météo actuel pour : ${city}</h2>
                         <p>Température : ${data2.main.temp}°C</p>
-                        <p>Temps : <img src="${u}"</p>
+                        <p>Temps : <img src="${u}">${data2.weather[0].description}</p>
                         `
                         let element2 = document.querySelector(`#track_weather`)
                         element2.innerHTML = modèle2
                         })
         })
+
+ 
 }
     

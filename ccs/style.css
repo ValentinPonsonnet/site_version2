@@ -33,7 +33,6 @@
 {
     background-color: black;
 }
-
 @media screen and (max-width: 815px)
 {
     *
@@ -43,5 +42,12 @@
     .carousel
     {
         display: none;
+    }
+}
+@media (max-width: 840px) 
+{
+    h2, p
+    {
+        text-align: center;
     }
 }   
