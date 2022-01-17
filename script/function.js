@@ -33,7 +33,7 @@ export function showLastWinner()
             return data;
          })
         .then(data =>{
-            const api_keys = ""
+            const api_keys = "1369479ae345426711eac957ac8ccbb4"
             const latitude = data.MRData.RaceTable.Races[0].Circuit.Location.lat
             const longitude = data.MRData.RaceTable.Races[0].Circuit.Location.long
             const city = data.MRData.RaceTable.Races[0].Circuit.Location.locality
