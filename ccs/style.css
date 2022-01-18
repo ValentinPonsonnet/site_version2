@@ -37,6 +37,11 @@
 {
     margin-bottom: 5%;
 }
+form
+{
+    border: black 2px solid;
+    border-radius: 30px;
+}
 @media screen and (max-width: 815px)
 {
     *

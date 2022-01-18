@@ -26,22 +26,39 @@
 
 
   <form action="traitement.php" method="POST">
-    <div class="row align-items-center form-group">        
-      <label for="" class="offset-1 col-sm-10">Votre Prénom :</label>
-      <div class="col-md-6 col-sm-10 offset-1 form-group">
-        <input class="col-lg-12" type="text" placeholder="First name" aria-label="First name">
-      </div>
-      <label for="" class="offset-1 col-sm-12">Votre nom :</label>
-      <div class="col-md-6 offset-1 col-sm-12 form-group"> 
-        <input class="col-lg-12" type="text" placeholder="Last name" aria-label="Last name">
-      </div>
-      <label for="" class="offset-1 col-sm-12">Votre message :</label>
-      <div class="col-md-6 offset-1 col-sm-12 form-group">
-        <textarea class="col-lg-12 form-label" placeholder="Votre texte" aria-label="Texte"></textarea>
-      </div>
-    </div class="">
-      <button class="btn btn-primary offset-1 col-sm-6">Envoyer</button>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col">
+          <div class="row">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Votre Prénom :</label>
+              <input type="email" class="form-control" id="first_name" placeholder="Prénom">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Votre nom :</label>
+              <input type="email" class="form-control" id="last_name" placeholder="Nom">
+            </div>
+          </div>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Votre object de contact</option>
+            <option value="1">Bug</option>
+            <option value="2">Demande d'information</option>
+            <option value="3">Autre</option>
+          </select>
+          <div class="form-textearea">
+            <label for="floatingTextarea" >Votre message :</label>
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>     
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">Submit form</button>
+          </div>
   </form>
+        </div>
+        <div class="col">
+          <iframe height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=138.7207388864772%2C35.35631719938376%2C138.74082326758074%2C35.36921382901517&amp;layer=mapnik&amp;marker=35.36276577171636%2C138.73078107702895"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=35.3628&amp;mlon=138.7308#map=16/35.3628/138.7308">Afficher une carte plus grande</a></small>
+        </div>
+      </div>
+    </div>
 
   <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
