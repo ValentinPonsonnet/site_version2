@@ -33,6 +33,10 @@
 {
     background-color: black;
 }
+.card
+{
+    margin-bottom: 5%;
+}
 @media screen and (max-width: 815px)
 {
     *

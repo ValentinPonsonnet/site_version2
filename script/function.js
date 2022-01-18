@@ -27,8 +27,8 @@ export function showLastWinner()
             const coordLongitude = data.MRData.RaceTable.Races[0].Circuit.Location.long
 
             let target = document.querySelector(`#track_view`);
-            let modele3=`<iframe width="100%" height="450" frameborder="0" scrolling="no" src="https://www.openstreetmap.org/export/embed.html?bbox=54.57304000854493%2C24.45531447461643%2C54.62822914123536%2C24.484102213514262&amp;layer=mapnik"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=15/${coordLatitude}/${coordLongitude}">Afficher une carte plus grande</a></small>`
-            
+            let modele3=`
+            <iframe height="650" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=54.60246491405997%2C24.46763112051758%2C54.61250710461173%2C24.47482796838245&amp;layer=mapnik"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=17/${coordLatitude}/${coordLongitude}">Afficher une carte plus grande</a></small>`
             target.innerHTML = modele3;
             return data;
          })
@@ -49,6 +49,11 @@ export function showLastWinner()
                         <h2>La météo actuel pour : ${city}</h2>
                         <p>Température : ${data2.main.temp}°C</p>
                         <p>Temps : <img src="${u}">${data2.weather[0].description}</p>
+                        <p>Température Min : ${data2.main.temp_min}°C</p>
+                        <p>Température Max : ${data2.main.temp_max}°C</p>
+                        <p>Humidité : ${data2.main.humidity}%</p>
+                        <p>Pression Atmosphèrique : ${data2.main.pressure}hPa</p>
+                        <p>Vitesse du vent : ${data2.wind.speed} km/h</p>
                         `
                         let element2 = document.querySelector(`#track_weather`)
                         element2.innerHTML = modèle2
