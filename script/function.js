@@ -5,8 +5,8 @@ export function showTracksInformation()
             return reponse.json();
         })
         .then(data => {
-                let modele =`
-                <h2>Le dernier gagnant :</h2>
+                let modele =
+                `<h2>Le dernier gagnant :</h2>
                 <p>Année du championnat : ${data.MRData.RaceTable.season}</p>
                 <p>Manche du championnat : ${data.MRData.RaceTable.Races[0].round}</p>
                 <p>Nom du circuit : ${data.MRData.RaceTable.Races[0].Circuit.circuitName}</p>
@@ -45,16 +45,15 @@ export function showTracksInformation()
                     })
                         .then(data2 =>{
                         let u = "http://openweathermap.org/img/wn/"+data2.weather[0].icon+".png"
-                        let modèle2 =`
-                        <h2>La météo actuel pour : ${city} (${data2.sys.country})</h2>
+                        let modèle2 =
+                        `<h2>La météo actuel pour : ${city} (${data2.sys.country})</h2>
                         <p>Température : ${data2.main.temp}°C</p>
                         <p>Temps : <img src="${u}">${data2.weather[0].description}</p>
                         <p>Température Min : ${data2.main.temp_min}°C</p>
                         <p>Température Max : ${data2.main.temp_max}°C</p>
                         <p>Humidité : ${data2.main.humidity}%</p>
                         <p>Pression Atmosphèrique : ${data2.main.pressure}hPa</p>
-                        <p>Vitesse du vent : ${data2.wind.speed}km/h</p>
-                        `
+                        <p>Vitesse du vent : ${data2.wind.speed}km/h</p>`
                         let element2 = document.querySelector(`#track_weather`)
                         element2.innerHTML = modèle2
                         })
