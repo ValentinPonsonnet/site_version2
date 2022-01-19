@@ -1,2 +1,2 @@
-import { showLastWinner } from './function.js';
-showLastWinner();
+import { showTracksInformation } from './function.js';
+showTracksInformation();
