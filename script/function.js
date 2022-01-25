@@ -28,7 +28,7 @@ export function showTracksInformation()
 
             let target = document.querySelector(`#track_view`);
             let modele3=`
-            <iframe width="100%" height="650" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=54.60246491405997%2C24.46763112051758%2C54.61250710461173%2C24.47482796838245&amp;layer=mapnik"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=17/${coordLatitude}/${coordLongitude}">Afficher une carte plus grande</a></small>`
+            <iframe width="100%" height="650" frameborder="0" scrolling="no" src="https://www.openstreetmap.org/export/embed.html?bbox=54.60246491405997%2C24.46763112051758%2C54.61250710461173%2C24.47482796838245&amp;layer=mapnik"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=17/${coordLatitude}/${coordLongitude}">Afficher une carte plus grande</a></small>`
             target.innerHTML = modele3;
             return data;
          })
@@ -46,7 +46,7 @@ export function showTracksInformation()
                         .then(data2 =>{
                         let u = "http://openweathermap.org/img/wn/"+data2.weather[0].icon+".png"
                         let modèle2 =
-                        `<h2>La météo actuel pour : ${city} (${data2.sys.country})</h2>
+                        `<h2>La météo actuel pour ${city} (${data2.sys.country})</h2>
                         <p>Température : ${data2.main.temp}°C</p>
                         <p>Temps : <img src="${u}">${data2.weather[0].description}</p>
                         <p>Température Min : ${data2.main.temp_min}°C</p>
@@ -58,7 +58,4 @@ export function showTracksInformation()
                         element2.innerHTML = modèle2
                         })
         })
-
- 
 }
-    
